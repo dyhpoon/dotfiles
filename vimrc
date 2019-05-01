@@ -63,7 +63,7 @@ noremap <Leader>f :NERDTreeFind<cr>
 " ----------------------------------------------------------------------------
 " goyo.vim + limelight.vim
 " ----------------------------------------------------------------------------
-let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
 let g:limelight_paragraph_span = 1
 let g:limelight_priority = -1
 
