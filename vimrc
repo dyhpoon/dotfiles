@@ -38,7 +38,7 @@ endif
 " BASIC SETTINGS {{{
 " ============================================================================
 
-set nu " Show line number
+set number relativenumber " Show line number
 set showcmd " Show me what I'm typing
 set showmode " show current mode
 set encoding=utf-8 " Set default encoding to UTF-8
