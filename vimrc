@@ -49,6 +49,7 @@ set incsearch " Shows the match while typing
 set hlsearch " Highlight found searches
 set scrolloff=5 " Minimal number of screen lines to keep above and below the cursor
 set laststatus=2
+set termguicolors
 
 " ----------------------------------------------------------------------------
 " Basic mappings
@@ -59,6 +60,9 @@ set laststatus=2
 nmap <C-n> :NERDTreeToggle<CR>
 noremap <Leader>n :NERDTreeToggle<cr>
 noremap <Leader>f :NERDTreeFind<cr>
+
+" <C-c> | fzf
+nnoremap <C-p> :<C-u>FZF<CR>
 
 " ----------------------------------------------------------------------------
 " goyo.vim + limelight.vim
