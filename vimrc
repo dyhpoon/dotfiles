@@ -18,6 +18,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'haishanh/night-owl.vim'
+Plug 'tpope/vim-fugitive'
 
 " Browsing
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -63,6 +64,14 @@ noremap <Leader>f :NERDTreeFind<cr>
 
 " <C-c> | fzf
 nnoremap <C-p> :<C-u>FZF<CR>
+
+" ----------------------------------------------------------------------------
+" Fugitive
+" ----------------------------------------------------------------------------
+nnoremap <leader>ga :Git add %:p<CR><CR>
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gb :Gblame<CR>
 
 " ----------------------------------------------------------------------------
 " goyo.vim + limelight.vim
