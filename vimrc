@@ -55,7 +55,10 @@ set termguicolors
 " ----------------------------------------------------------------------------
 " Basic mappings
 " ----------------------------------------------------------------------------
-"
+nmap <Up>    <Nop>
+nmap <Down>  <Nop>
+nmap <Left>  <Nop>
+nmap <Right> <Nop>
 
 " <C-n> | NERD tree
 nmap <C-n> :NERDTreeToggle<CR>
