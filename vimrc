@@ -48,6 +48,7 @@ set nobackup " Don't create annoying backup files
 set autoindent
 set incsearch " Shows the match while typing
 set hlsearch " Highlight found searches
+set ignorecase " Search case insensitive
 set scrolloff=5 " Minimal number of screen lines to keep above and below the cursor
 set laststatus=2
 set termguicolors
