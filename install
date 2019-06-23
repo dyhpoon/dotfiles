@@ -10,6 +10,7 @@ for rc in tmux.conf; do
   ln -sfv "$BASE/$rc" ~/."$rc"
 done
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux source-file ~/.tmux.conf
 
 ./install-vim
