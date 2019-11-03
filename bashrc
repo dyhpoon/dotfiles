@@ -17,3 +17,11 @@ PROMPT_COMMAND="history -a;history -c; history -r; $PROMPT_COMMAND"
 
 # [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+# Aliases
+# --------------------------------------------------------------------
+alias k='kubectl'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
