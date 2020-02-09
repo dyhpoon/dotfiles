@@ -25,3 +25,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
+
+# Rust
+[ -e ~/.cargo/bin ] && export PATH=$PATH:~/.cargo/bin
