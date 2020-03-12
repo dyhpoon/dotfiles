@@ -28,3 +28,8 @@ alias ......='cd ../../../../..'
 
 # Rust
 [ -e ~/.cargo/bin ] && export PATH=$PATH:~/.cargo/bin
+
+alias ls='exa'
+alias cat='bat'
+alias less='bat'
+alias grep='ripgrep'
