@@ -8,7 +8,7 @@ opt.number = true -- shows absolute line number on cursor line (when relative nu
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.softtabstop = 0
-opt.smartindent= true
+opt.smartindent = true
 opt.smarttab = true
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
@@ -32,7 +32,7 @@ opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 -- backups
 opt.swapfile = false
 opt.backup = false
-opt.undodir = vim.fn.expand('~/.vim/undodir')
+opt.undodir = vim.fn.expand("~/.vim/undodir")
 opt.undofile = true
 
 -- clipboard
