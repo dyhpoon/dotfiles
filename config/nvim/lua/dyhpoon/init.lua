@@ -14,9 +14,10 @@ require("dyhpoon.plugins.lsp.null-ls")
 require("dyhpoon.plugins.treesitter")
 require("dyhpoon.plugins.gitsigns")
 require("dyhpoon.plugins.symbols-outline")
+require("dyhpoon.plugins.comment")
+require("dyhpoon.plugins.auto-pairs")
 
 require("dyhpoon.telescope")
-require("dyhpoon.comment")
 
 P = function(v)
   print(vim.inspect(v))

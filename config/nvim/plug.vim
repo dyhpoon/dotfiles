@@ -1,19 +1,21 @@
 call plug#begin()
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'tpope/vim-surround'
-Plug 'numToStr/Comment.nvim', { 'tag': 'v0.6' }
-Plug 'jvgrootveld/telescope-zoxide'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
 Plug 'nvim-telescope/telescope-frecency.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+Plug 'jvgrootveld/telescope-zoxide'
 Plug 'kkharji/sqlite.lua'
+
+" Other Utils
+Plug 'numToStr/Comment.nvim', { 'tag': 'v0.6' }
+Plug 'windwp/nvim-autopairs'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'shumphrey/fugitive-gitlab.vim'
-
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
