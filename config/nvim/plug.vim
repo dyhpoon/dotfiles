@@ -12,6 +12,7 @@ Plug 'kkharji/sqlite.lua'
 " Other Utils
 Plug 'numToStr/Comment.nvim', { 'tag': 'v0.6' }
 Plug 'windwp/nvim-autopairs'
+Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
