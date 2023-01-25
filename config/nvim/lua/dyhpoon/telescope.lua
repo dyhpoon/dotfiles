@@ -31,6 +31,7 @@ telescope.load_extension("file_browser")
 telescope.load_extension("fzf")
 telescope.load_extension("zoxide")
 telescope.load_extension("frecency")
+telescope.load_extension("live_grep_args")
 
 local set_prompt_to_entry_value = function(prompt_bufnr)
   local entry = action_state.get_selected_entry()
