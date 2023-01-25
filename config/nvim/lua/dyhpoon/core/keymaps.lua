@@ -22,8 +22,5 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 -- Plugin Keybinds
 ----------------------
 
--- nvim-tree
-keymap.set("n", "<leader>b", ":NvimTreeFindFileToggle<CR>") -- toggle file explorer
-
--- symbols-outline
-keymap.set("n", "<leader>o", ":SymbolsOutline<CR>")
+-- neo-tree
+keymap.set("n", "<leader>b", ":Neotree toggle<CR>") -- toggle file explorer

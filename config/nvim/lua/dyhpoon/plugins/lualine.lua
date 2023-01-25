@@ -34,7 +34,7 @@ lualine.setup({
   options = {
     theme = lualine_nightfly,
   },
-  extensions = { "nvim-tree", "fzf", "fugitive" },
+  extensions = { "neo-tree", "fzf", "fugitive" },
   sections = {
     lualine_c = {
       {

@@ -26,8 +26,9 @@ Plug 'tpope/vim-rails'
 Plug 'bluz71/vim-nightfly-guicolors'
 
 " file explorer & UIs
-Plug 'nvim-tree/nvim-tree.lua'
-Plug 'simrat39/symbols-outline.nvim'
+Plug 'nvim-neo-tree/neo-tree.nvim', { 'branch': 'v2.x' }
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'MunifTanjim/nui.nvim'
 
 " statusline
 Plug 'nvim-lualine/lualine.nvim'
