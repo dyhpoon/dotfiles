@@ -73,6 +73,9 @@ Plug 'folke/which-key.nvim'
 " rust
 Plug 'simrat39/rust-tools.nvim'
 
+" copilot
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 filetype plugin on
