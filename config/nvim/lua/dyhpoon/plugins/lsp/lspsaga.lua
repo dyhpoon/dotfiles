@@ -5,9 +5,7 @@ if not saga_status then
   return
 end
 
-saga.init_lsp_saga({
-  -- keybinds for navigation in lspsaga window
-  move_in_saga = { prev = "<C-k>", next = "<C-j>" },
+saga.setup({
   -- use enter to open file with finder
   finder_action_keys = {
     open = "<CR>",
