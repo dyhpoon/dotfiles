@@ -25,3 +25,5 @@
 - tmux
 - ripgrep
 - coreutils
+- tealdeer
+- fzf
