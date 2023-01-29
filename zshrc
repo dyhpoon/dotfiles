@@ -17,7 +17,7 @@ alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
 
 alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
 alias cb='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout'
-alias weather="curl -4 wttr.in"
+alias weather="curl -4 wttr.in/central_hong_kong"
 alias ls="exa"
 alias ll="exa --long --header --git --icons"
 alias tree="ll --tree --level=4 -a -I=.git --git-ignore"
