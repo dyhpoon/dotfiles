@@ -27,3 +27,6 @@
 - coreutils
 - tealdeer
 - fzf
+- exa
+- gh
+

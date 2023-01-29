@@ -15,9 +15,17 @@ alias rest="timer 10m && terminal-notifier -message 'Pomodoro'\
         -appIcon '~/Pictures/pumpkin.png'\
         -sound Crystal"
 
-# tldr interactive
 alias tldrf='tldr --list | fzf --preview "tldr {1} --color=always" --preview-window=right,70% | xargs tldr'
+alias cb='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout'
+alias weather="curl -4 wttr.in/nashville"
+alias ls="exa"
+alias ll="exa --long --header --git --icons"
+alias tree="ll --tree --level=4 -a -I=.git --git-ignore"
+alias zshrc="vim ~/.zshrc"
+alias zshrcs="source ~/.zshrc"
+alias gpr="GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout" 
 
-# change branch
-alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout'
+function ghpr() {
+    GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout
+}
 
