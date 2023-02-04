@@ -23,7 +23,6 @@ set signcolumn=yes
 " Imports "{{{
 " ---------------------------------------------------------------------
 runtime ./plug.vim
-runtime ./maps.vim
 "}}}
 
 

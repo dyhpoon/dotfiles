@@ -64,8 +64,8 @@ neotree.setup({
     mappings = {
       ["<space>"] = "none",
       ["o"] = "open",
-      ["|"] = "open_split",
-      ["-"] = "open_vsplit",
+      ["|"] = "open_vsplit",
+      ["-"] = "open_split",
     },
   },
 })
