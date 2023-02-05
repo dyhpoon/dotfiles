@@ -12,13 +12,6 @@ if not cmp_nvim_lsp_status then
   return
 end
 
-local rust_tool_status, rust_tools = pcall(require, "rust-tools")
-if not rust_tool_status then
-  print("rust_tools not found!")
-  return
-end
-rust_tools.setup()
-
 local keymap = vim.keymap -- for conciseness
 
 -- enable keybinds only for when lsp server available
@@ -112,10 +105,4 @@ lspconfig["sumneko_lua"].setup({
       },
     },
   },
-})
-
--- configure rust_analyzer server
-lspconfig["rust_analyzer"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
 })

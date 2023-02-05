@@ -3,15 +3,6 @@ local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 local themes = require("telescope.themes")
 
-SHOULD_RELOAD_TELESCOPE = true
-local reloader = function()
-  if SHOULD_RELOAD_TELESCOPE then
-    RELOAD("plenary")
-    RELOAD("telescope")
-    RELOAD("dyhpoon.telescope")
-  end
-end
-
 telescope.setup({
   defaults = {
     mappings = {
@@ -20,14 +11,8 @@ telescope.setup({
       },
     },
   },
-  extensions = {
-    file_browser = {
-      theme = "ivy",
-    },
-  },
 })
 
-telescope.load_extension("file_browser")
 telescope.load_extension("fzf")
 telescope.load_extension("zoxide")
 telescope.load_extension("frecency")
@@ -209,59 +194,6 @@ function M.git_files()
   require("telescope.builtin").git_files(opts)
 end
 
-function M.file_browser()
-  local opts
-
-  opts = {
-    sorting_strategy = "ascending",
-    scroll_strategy = "cycle",
-    layout_config = {
-      prompt_position = "top",
-    },
-    path = "%:p:h",
-
-    attach_mappings = function(prompt_bufnr, map)
-      local current_picker = action_state.get_current_picker(prompt_bufnr)
-
-      local modify_cwd = function(new_cwd)
-        local finder = current_picker.finder
-
-        finder.path = new_cwd
-        finder.files = true
-        current_picker:refresh(false, { reset_prompt = true })
-      end
-
-      map("i", "-", function()
-        modify_cwd(current_picker.cwd .. "/..")
-      end)
-
-      map("i", "~", function()
-        modify_cwd(vim.fn.expand("~"))
-      end)
-
-      -- local modify_depth = function(mod)
-      --   return function()
-      --     opts.depth = opts.depth + mod
-      --
-      --     current_picker:refresh(false, { reset_prompt = true })
-      --   end
-      -- end
-      --
-      -- map("i", "<M-=>", modify_depth(1))
-      -- map("i", "<M-+>", modify_depth(-1))
-
-      map("n", "yy", function()
-        local entry = action_state.get_selected_entry()
-        vim.fn.setreg("+", entry.value)
-      end)
-
-      return true
-    end,
-  }
-
-  require("telescope").extensions.file_browser.file_browser(opts)
-end
-
 function M.project_search()
   require("telescope.builtin").find_files({
     previewer = false,
@@ -311,7 +243,6 @@ end
 
 return setmetatable({}, {
   __index = function(_, k)
-    reloader()
 
     if M[k] then
       return M[k]

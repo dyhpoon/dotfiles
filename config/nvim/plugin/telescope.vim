@@ -14,9 +14,9 @@ nnoremap <Leader>ff :lua require('dyhpoon.telescope').find_files_frecency()<CR>
 nnoremap <Leader>fg :lua require('dyhpoon.telescope').live_grep()<CR>
 nnoremap <Leader>fG :lua require('telescope').extensions.live_grep_args.live_grep_args()<CR> 
 nnoremap <leader>fw :lua require('dyhpoon.telescope').grep_string()<CR>
-nnoremap <Leader>fe :lua require('dyhpoon.telescope').file_browser()<CR>
+" nnoremap <Leader>fe :lua require('dyhpoon.telescope').file_browser()<CR>
 " nnoremap <Leader>pp :lua require('dyhpoon.telescope').project_search()<CR>
-nnoremap <Leader>z :lua require('telescope').extensions.zoxide.list{}<CR>
+" nnoremap <Leader>z :lua require('telescope').extensions.zoxide.list{}<CR>
 
 " Git
 nnoremap <Leader>gs :lua require('dyhpoon.telescope').git_status()<CR>
