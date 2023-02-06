@@ -3,6 +3,7 @@ return {
   {
     'lewis6991/gitsigns.nvim', -- show line modifications on left hand side
     lazy = true,
+    event = "BufRead",
     opts = {
         current_line_blame = true
     }
@@ -34,11 +35,15 @@ return {
   { 'tpope/vim-rails' },
 
   -- Copilot
-  { 'github/copilot.vim' },
+  {
+    'github/copilot.vim',
+    event = "BufRead",
+  },
 
   -- Other Utils
   {
     'numToStr/Comment.nvim',
+    event = "BufRead",
     config = function()
       require('Comment').setup()
     end

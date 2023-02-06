@@ -3,21 +3,6 @@ local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 local themes = require("telescope.themes")
 
-telescope.setup({
-  defaults = {
-    mappings = {
-      n = {
-        ["q"] = actions.close,
-      },
-    },
-  },
-})
-
-telescope.load_extension("fzf")
-telescope.load_extension("zoxide")
-telescope.load_extension("frecency")
-telescope.load_extension("live_grep_args")
-
 local set_prompt_to_entry_value = function(prompt_bufnr)
   local entry = action_state.get_selected_entry()
   if not entry or not type(entry) == "table" then
@@ -26,6 +11,35 @@ local set_prompt_to_entry_value = function(prompt_bufnr)
 
   action_state.get_current_picker(prompt_bufnr):reset_prompt(entry.ordinal)
 end
+
+--[[
+" lua require("dyhpoon")
+nnoremap <silent> ;b <cmd>lua require('telescope.builtin').file_browser()<cr>
+nnoremap <silent> \\ <cmd>Telescope buffers<cr>
+nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
+
+" Dotfile
+nnoremap <leader>en :lua require('dyhpoon.telescope').edit_neovim()<CR>
+
+" Files
+" nnoremap <C-p> :lua require('telescope.builtin').git_files({ layout_config = { prompt_position = "top" }, sorting_strategy = "ascending" })<CR>
+" nnoremap <Leader>ff :lua require('dyhpoon.telescope').find_files()<CR>
+nnoremap <Leader>ff :lua require('dyhpoon.telescope').find_files_frecency()<CR>
+nnoremap <Leader>fg :lua require('dyhpoon.telescope').live_grep()<CR>
+nnoremap <Leader>fG :lua require('telescope').extensions.live_grep_args.live_grep_args()<CR> 
+nnoremap <leader>fw :lua require('dyhpoon.telescope').grep_string()<CR>
+
+" Git
+nnoremap <Leader>gs :lua require('dyhpoon.telescope').git_status()<CR>
+nnoremap <Leader>gc :lua require('dyhpoon.telescope').git_commits()<CR>
+nnoremap <leader>gb :lua require('dyhpoon.telescope').git_branches()<CR>
+nmap <leader>ga :G<CR>
+
+" Nvim
+nnoremap <Leader>fh :lua require('telescope.builtin').help_tags()<CR>
+nnoremap <leader>fb :lua require('telescope.builtin').buffers()<CR>
+nnoremap <Leader>gp :lua require('dyhpoon.telescope').grep_prompt()<CR>
+--]]
 
 local M = {}
 
