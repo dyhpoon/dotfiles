@@ -29,4 +29,4 @@
 - fzf
 - exa
 - gh
-
+- lazygit
