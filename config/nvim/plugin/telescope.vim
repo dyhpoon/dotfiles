@@ -1,4 +1,4 @@
-lua require("dyhpoon")
+" lua require("dyhpoon")
 
 nnoremap <silent> ;b <cmd>lua require('telescope.builtin').file_browser()<cr>
 nnoremap <silent> \\ <cmd>Telescope buffers<cr>
