@@ -115,6 +115,7 @@ return {
 
   {
     "williamboman/mason.nvim",
+    event = "BufEnter",
     config = function()
       require("mason").setup()
     end
@@ -123,6 +124,7 @@ return {
   {
     -- bridges gap b/w mason & lspconfig
     'williamboman/mason-lspconfig.nvim',
+    event = "BufReadPre",
     opts = {
       ensure_installed = {
         "html",
@@ -195,6 +197,7 @@ return {
 
   {
     'jayp0521/mason-null-ls.nvim',
+    event = "BufReadPre",
     opts = {
       ensure_installed = {
         "prettier", -- ts/js formatter
