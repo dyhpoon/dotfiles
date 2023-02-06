@@ -9,9 +9,7 @@ return {
       "nvim-lua/plenary.nvim",
     },
     keys = {
-      { "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
-      { "<leader>/", Util.telescope("live_grep"), desc = "Find in Files (Grep)" },
-      { "<leader>:", "<cmd>Telescope command_history<cr>", desc = "Command History" },
+      { "<leader>,", "<cmd>Telescope resume<cr>", desc = "Telescope Resume" },
       -- find
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
       { "<leader>ff", Util.telescope("files"), desc = "Find Files" },
