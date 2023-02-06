@@ -2,6 +2,7 @@ return {
   -- git
   {
     'lewis6991/gitsigns.nvim', -- show line modifications on left hand side
+    lazy = true,
     opts = {
         current_line_blame = true
     }

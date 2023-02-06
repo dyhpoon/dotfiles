@@ -19,22 +19,12 @@ return {
   deactivate = function()
     vim.cmd([[Neotree close]])
   end,
-  init = function()
-    vim.g.neo_tree_remove_legacy_commands = 1
-    if vim.fn.argc() == 1 then
-      local stat = vim.loop.fs_stat(vim.fn.argv(0))
-      if stat and stat.type == "directory" then
-        require("neo-tree")
-      end
-    end
-  end,
   opts = {
     close_if_last_window = true,
     popup_border_style = "rounded",
     enable_git_status = true,
-    enable_diagnostics = true,
     filesystem = {
-      bind_to_cwd = false,
+      bind_to_cwd = true,
       follow_current_file = true,
       use_libuv_file_watcher = true,
       filtered_items = {
@@ -84,4 +74,8 @@ return {
       },
     },
   },
+  config = function(_, opts)
+    vim.g.neo_tree_remove_legacy_commands = 1
+    require('neo-tree').setup(opts)
+  end
 }
