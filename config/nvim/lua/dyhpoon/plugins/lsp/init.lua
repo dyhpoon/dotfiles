@@ -118,12 +118,12 @@ return {
     event = "BufEnter",
     config = function()
       require("mason").setup()
-    end
+    end,
   },
-  
+
   {
     -- bridges gap b/w mason & lspconfig
-    'williamboman/mason-lspconfig.nvim',
+    "williamboman/mason-lspconfig.nvim",
     event = "BufReadPre",
     opts = {
       ensure_installed = {
@@ -139,19 +139,19 @@ return {
       automatic_installation = true, -- not the same as ensure_installed
     },
     dependencies = {
-      'williamboman/mason.nvim'
-    }
+      "williamboman/mason.nvim",
+    },
   },
 
   {
     "glepnir/lspsaga.nvim",
     event = "BufRead",
     config = function()
-        require("lspsaga").setup({})
+      require("lspsaga").setup({})
     end,
     dependencies = {
-      "nvim-tree/nvim-web-devicons"
-    }
+      "nvim-tree/nvim-web-devicons",
+    },
   },
 
   -- formatters
@@ -192,11 +192,11 @@ return {
           end
         end,
       }
-    end
+    end,
   },
 
   {
-    'jayp0521/mason-null-ls.nvim',
+    "jayp0521/mason-null-ls.nvim",
     event = "BufReadPre",
     opts = {
       ensure_installed = {
@@ -210,8 +210,8 @@ return {
       automatic_installation = true, -- not the same as ensure_installed
     },
     dependencies = {
-      'williamboman/mason.nvim',
-      'jose-elias-alvarez/null-ls.nvim' -- configure formatters & linters
-    }
-  }
+      "williamboman/mason.nvim",
+      "jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
+    },
+  },
 }

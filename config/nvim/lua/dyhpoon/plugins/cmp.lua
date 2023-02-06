@@ -38,7 +38,7 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "saadparwaiz1/cmp_luasnip",
-      'onsails/lspkind.nvim' -- vs-code like icons for autocompletion
+      "onsails/lspkind.nvim", -- vs-code like icons for autocompletion
     },
     opts = function()
       local cmp = require("cmp")
@@ -76,6 +76,6 @@ return {
           },
         },
       }
-    end
-  }
+    end,
+  },
 }

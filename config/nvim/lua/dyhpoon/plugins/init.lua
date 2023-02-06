@@ -1,21 +1,21 @@
 return {
   -- git
   {
-    'lewis6991/gitsigns.nvim', -- show line modifications on left hand side
+    "lewis6991/gitsigns.nvim", -- show line modifications on left hand side
     lazy = true,
     event = "BufRead",
     opts = {
-        current_line_blame = true
-    }
+      current_line_blame = true,
+    },
   },
-  { 'tpope/vim-fugitive' },
-  { 'tpope/vim-rhubarb' },
-  { 'shumphrey/fugitive-gitlab.vim' },
+  { "tpope/vim-fugitive" },
+  { "tpope/vim-rhubarb" },
+  { "shumphrey/fugitive-gitlab.vim" },
 
   -- multi select
   {
-    'mg979/vim-visual-multi',
-    branch = 'master'
+    "mg979/vim-visual-multi",
+    branch = "master",
   },
 
   -- easily jump to any location and enhanced f/t motions for Leap
@@ -60,7 +60,7 @@ return {
 
   -- markdown
   {
-    'iamcco/markdown-preview.nvim',
+    "iamcco/markdown-preview.nvim",
     build = "cd app && yarn install",
     init = function()
       vim.g.mkdp_filetypes = { "markdown" }
@@ -68,25 +68,25 @@ return {
   },
 
   -- tmux
-  { 'christoomey/vim-tmux-navigator' }, -- tmux & split window navigation
+  { "christoomey/vim-tmux-navigator" }, -- tmux & split window navigation
 
   -- Ruby
-  { 'vim-ruby/vim-ruby' },
-  { 'tpope/vim-rails' },
+  { "vim-ruby/vim-ruby" },
+  { "tpope/vim-rails" },
 
   -- Copilot
   {
-    'github/copilot.vim',
+    "github/copilot.vim",
     event = "BufRead",
   },
 
   -- Other Utils
   {
-    'numToStr/Comment.nvim',
+    "numToStr/Comment.nvim",
     event = "BufRead",
     config = function()
-      require('Comment').setup()
-    end
+      require("Comment").setup()
+    end,
   },
   -- better diagnostics list and others
   {

@@ -257,7 +257,6 @@ end
 
 return setmetatable({}, {
   __index = function(_, k)
-
     if M[k] then
       return M[k]
     else

@@ -2,7 +2,7 @@ return {
   "nvim-neo-tree/neo-tree.nvim",
   cmd = "Neotree",
   branch = "v2.x",
-  dependencies = { 
+  dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
     "MunifTanjim/nui.nvim",
@@ -14,7 +14,7 @@ return {
         require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
       end,
       desc = "Explorer NeoTree (cwd)",
-    }
+    },
   },
   deactivate = function()
     vim.cmd([[Neotree close]])
@@ -35,7 +35,7 @@ return {
         },
         never_show = {
           ".DS_Store",
-          ".git"
+          ".git",
         },
       },
     },
@@ -76,6 +76,6 @@ return {
   },
   config = function(_, opts)
     vim.g.neo_tree_remove_legacy_commands = 1
-    require('neo-tree').setup(opts)
-  end
+    require("neo-tree").setup(opts)
+  end,
 }
