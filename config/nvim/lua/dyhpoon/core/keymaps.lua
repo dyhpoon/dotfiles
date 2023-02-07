@@ -27,6 +27,12 @@ map("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
 map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
 
+-- floating terminal
+map("n", "<leader>ft", function()
+  Util.float_term(nil, { cwd = Util.get_root() })
+end, { desc = "Terminal" })
+map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
+
 -- better indenting
 map("v", "<", "<gv")
 map("v", ">", ">gv")
