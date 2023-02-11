@@ -13,11 +13,7 @@ return {
       -- find
       { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
       { "<leader>ff", Util.telescope("files"), desc = "Find Files" },
-      {
-        "<leader>fF",
-        ":lua require('telescope.builtin').find_files({cwd=require('telescope.utils').buffer_dir()})<cr>",
-        desc = "Find Files (Buffer)",
-      },
+      { "<leader>fF", Util.telescope_find_buffer_files, desc = "Find Files (Buffer)" },
       { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
       -- git
       { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },

@@ -92,6 +92,22 @@ function M.telescope(builtin, opts)
   end
 end
 
+function M.telescope_find_buffer_files()
+  local opts
+  opts = {
+    cwd = require("telescope.utils").buffer_dir(),
+    sorting_strategy = "ascending",
+    layout_config = {
+      prompt_position = "top",
+    },
+    scroll_strategy = "limit",
+    path_display = {
+      absolute = true,
+    },
+  }
+  require("telescope.builtin").find_files(opts)
+end
+
 -- FIXME: create a togglable terminal
 -- Opens a floating terminal (interactive by default)
 ---@param cmd? string[]|string
