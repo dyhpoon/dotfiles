@@ -89,10 +89,3 @@ map("n", "<C-a>", "gg<S-v>G")
 map("n", "cp", ":let @+ = expand('%')<cr>", { desc = "Copy relative path" })
 map("n", "cfp", ":let @+ = expand('%:p')<cr>", { desc = "Copy full path" })
 map("n", "crp", ":.GBrowse!<cr>", { desc = "Copy remote path" })
-
-----------------------
--- Plugin Keybinds
-----------------------
-
--- neo-tree
-map("n", "<leader>b", ":Neotree toggle<CR>") -- toggle file explorer

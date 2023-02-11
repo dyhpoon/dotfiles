@@ -26,8 +26,9 @@ return {
     filesystem = {
       bind_to_cwd = true,
       follow_current_file = true,
-      use_libuv_file_watcher = true,
+      use_libuv_file_watcher = false,
       filtered_items = {
+        visible = true,
         hide_dotfiles = false,
         hide_by_name = {
           ".DS_Store",
