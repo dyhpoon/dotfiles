@@ -68,6 +68,29 @@ return {
                 action_sets.shift_selection(b, 5)
               end,
             },
+            i = {
+              ["<c-t>"] = function(...)
+                return require("trouble.providers.telescope").open_with_trouble(...)
+              end,
+              ["<a-i>"] = function()
+                Util.telescope("find_files", { no_ignore = true })()
+              end,
+              ["<a-h>"] = function()
+                Util.telescope("find_files", { hidden = true })()
+              end,
+              ["<C-Down>"] = function(...)
+                return actions.cycle_history_next(...)
+              end,
+              ["<C-Up>"] = function(...)
+                return actions.cycle_history_prev(...)
+              end,
+              ["<C-f>"] = function(...)
+                return actions.preview_scrolling_down(...)
+              end,
+              ["<C-b>"] = function(...)
+                return actions.preview_scrolling_up(...)
+              end,
+            },
           },
         },
       })
