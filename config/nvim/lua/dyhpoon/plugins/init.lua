@@ -40,12 +40,6 @@ return {
   { "tpope/vim-rhubarb" },
   { "shumphrey/fugitive-gitlab.vim" },
 
-  -- multi select
-  {
-    "mg979/vim-visual-multi",
-    branch = "master",
-  },
-
   -- easily jump to any location and enhanced f/t motions for Leap
   {
     "ggandor/leap.nvim",
@@ -60,6 +54,15 @@ return {
       vim.keymap.del({ "x", "o" }, "x")
       vim.keymap.del({ "x", "o" }, "X")
     end,
+  },
+
+  -- search/replace in multiple files
+  {
+    "windwp/nvim-spectre",
+    -- stylua: ignore
+    keys = {
+      { "<leader>sr", function() require("spectre").open() end, desc = "Replace in files (Spectre)" },
+    },
   },
 
   -- which-key
