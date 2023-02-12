@@ -89,3 +89,11 @@ map("n", "<C-a>", "gg<S-v>G")
 map("n", "cp", ":let @+ = expand('%')<cr>", { desc = "Copy relative path" })
 map("n", "cfp", ":let @+ = expand('%:p')<cr>", { desc = "Copy full path" })
 map("n", "crp", ":.GBrowse!<cr>", { desc = "Copy remote path" })
+
+-- tabs
+map("n", "<leader><tab>l", "<cmd>tablast<cr>", { desc = "Last Tab" })
+map("n", "<leader><tab>f", "<cmd>tabfirst<cr>", { desc = "First Tab" })
+map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
+map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
+map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
+map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
