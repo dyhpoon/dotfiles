@@ -30,3 +30,4 @@
 - exa
 - gh
 - lazygit
+- gnu-sed
