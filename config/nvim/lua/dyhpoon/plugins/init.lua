@@ -5,14 +5,6 @@ return {
     event = { "BufReadPre", "BufNewFile" },
     opts = {
       current_line_blame = true,
-      signs = {
-        add = { text = "▎" },
-        change = { text = "▎" },
-        delete = { text = "契" },
-        topdelete = { text = "契" },
-        changedelete = { text = "▎" },
-        untracked = { text = "▎" },
-      },
       on_attach = function(buffer)
         local gs = package.loaded.gitsigns
 
@@ -79,9 +71,11 @@ return {
         mode = { "n" },
         ["]"] = { name = "+next" },
         ["["] = { name = "+prev" },
+        ["<leader><tab>"] = { name = "+tabs" },
         ["<leader>c"] = { name = "+code" },
         ["<leader>f"] = { name = "+file/find" },
         ["<leader>g"] = { name = "+git" },
+        ["<leader>gh"] = { name = "+hunks" },
         ["<leader>q"] = { name = "+quit/session" },
         ["<leader>s"] = { name = "+search" },
         ["<leader>u"] = { name = "+ui" },
