@@ -23,9 +23,9 @@ alias ll="exa --long --header --git --icons"
 alias tree="ll --tree --level=4 -a -I=.git --git-ignore"
 alias zshrc="vim ~/.zshrc"
 alias zshrcs="source ~/.zshrc"
-alias gpr="GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout" 
+alias gpr="GH_FORCE_TTY=100% gh pr list --limit 1000 | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout" 
 
 function ghpr() {
-    GH_FORCE_TTY=100% gh pr list | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout
+    GH_FORCE_TTY=100% gh pr list --limit 1000 | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout
 }
 
