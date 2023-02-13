@@ -140,7 +140,7 @@ return {
         "html",
         "cssls",
         "tailwindcss",
-        "ruby-lsp",
+        "ruby_ls",
         "gopls",
         "pyright",
         "sumneko_lua",
