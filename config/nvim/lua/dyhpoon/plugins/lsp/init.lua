@@ -140,7 +140,7 @@ return {
         "html",
         "cssls",
         "tailwindcss",
-        "ruby_ls",
+        "solargraph",
         "gopls",
         "pyright",
         "sumneko_lua",
