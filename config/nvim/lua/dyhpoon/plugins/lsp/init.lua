@@ -140,7 +140,7 @@ return {
         "html",
         "cssls",
         "tailwindcss",
-        "solargraph",
+        "ruby-lsp",
         "gopls",
         "pyright",
         "sumneko_lua",
@@ -179,7 +179,7 @@ return {
           formatting.stylua, -- lua formatter
           formatting.gofmt,
           formatting.golines,
-          diagnostics.golangci_lint
+          diagnostics.golangci_lint,
         },
       }
     end,
