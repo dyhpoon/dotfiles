@@ -27,6 +27,9 @@ map("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
 map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
 
+-- paste
+map('v', "<leader>p", "\"_dP")
+
 -- floating terminal
 map("n", "<leader>ft", function()
   Util.float_term(nil, { cwd = Util.get_root() })
