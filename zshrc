@@ -29,3 +29,16 @@ function ghpr() {
     GH_FORCE_TTY=100% gh pr list --limit 1000 | fzf --ansi --preview 'GH_FORCE_TTY=100% gh pr view {1}' --preview-window down --header-lines 3 | awk '{print $1}' | xargs gh pr checkout
 }
 
+# switch different nvim config
+# git clone --depth 1 https://github.com/LazyVim/starter ~/.config/LazyVim
+function nvims() {
+  items=("default" "LazyVim")
+  config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=50% --layout=reverse --border --exit-0)
+  if [[ -z $config ]]; then
+    echo "Nothing selected"
+    return 0
+  elif [[ $config == "default" ]]; then
+    config=""
+  fi
+  NVIM_APPNAME=$config nvim $@
+}
