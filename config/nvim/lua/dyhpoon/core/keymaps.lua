@@ -40,8 +40,8 @@ map("t", "<esc><esc>", "<c-\\><c-n>", { desc = "Enter Normal Mode" })
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
--- lazy
-map("n", "<leader>l", "<cmd>:Lazy<cr>", { desc = "Lazy" })
+-- Aerial
+map('n', '<leader>l', '<cmd>AerialToggle<cr>', { desc = "Skim functions" })
 
 -- new file
 map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
