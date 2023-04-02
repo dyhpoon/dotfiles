@@ -28,7 +28,12 @@ map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
 
 -- paste
-map('v', "<leader>p", "\"_dP")
+map("v", "<leader>p", '"_dP')
+
+-- open file
+map("n", "<leader>oo", "<cmd>silent !open %<cr>", { desc = "Open file" })
+map("n", "<leader>oc", "<cmd>silent !open % -a Google\\ Chrome<cr>", { desc = "Open file in Chrome" })
+map("n", "<leader>of", "<cmd>silent !open % -a Firefox<cr>", { desc = "Open file in Firefox" })
 
 -- floating terminal
 map("n", "<leader>ft", function()
@@ -41,7 +46,7 @@ map("v", "<", "<gv")
 map("v", ">", ">gv")
 
 -- Aerial
-map('n', '<leader>l', '<cmd>AerialToggle<cr>', { desc = "Skim functions" })
+map("n", "<leader>l", "<cmd>AerialToggle<cr>", { desc = "Skim functions" })
 
 -- new file
 map("n", "<leader>fn", "<cmd>enew<cr>", { desc = "New File" })
