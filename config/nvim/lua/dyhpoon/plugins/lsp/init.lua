@@ -121,36 +121,6 @@ return {
     end,
   },
 
-  {
-    "williamboman/mason.nvim",
-    event = "BufEnter",
-    config = function()
-      require("mason").setup()
-    end,
-  },
-
-  {
-    -- bridges gap b/w mason & lspconfig
-    "williamboman/mason-lspconfig.nvim",
-    event = "BufReadPre",
-    opts = {
-      ensure_installed = {
-        "html",
-        "cssls",
-        "tailwindcss",
-        "solargraph",
-        "gopls",
-        "pyright",
-        "sumneko_lua",
-      },
-      -- auto-install configured servers (with lspconfig)
-      automatic_installation = true, -- not the same as ensure_installed
-    },
-    dependencies = {
-      "williamboman/mason.nvim",
-    },
-  },
-
   -- formatters
   {
     "jose-elias-alvarez/null-ls.nvim",
@@ -173,22 +143,35 @@ return {
   },
 
   {
-    "jayp0521/mason-null-ls.nvim",
-    event = "BufReadPre",
+    "williamboman/mason.nvim",
+    event = "BufEnter",
+    build = ":MasonUpdate",
     opts = {
       ensure_installed = {
-        "prettier", -- ts/js formatter
-        "stylua", -- lua formatter
-        "golangci_lint",
-        "goimports_reviser",
-        "golines",
+        "pyright",
+        "gopls",
+        "stylua",
+        "solargraph",
+        "shfmt",
       },
-      -- auto-install configured servers (with lspconfig)
-      automatic_installation = true, -- not the same as ensure_installed
     },
-    dependencies = {
-      "williamboman/mason.nvim",
-      "jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
-    },
+    ---@param opts MasonSettings | {ensure_installed: string[]}
+    config = function(_, opts)
+      require("mason").setup(opts)
+      local mr = require("mason-registry")
+      local function ensure_installed()
+        for _, tool in ipairs(opts.ensure_installed) do
+          local p = mr.get_package(tool)
+          if not p:is_installed() then
+            p:install()
+          end
+        end
+      end
+      if mr.refresh then
+        mr.refresh(ensure_installed)
+      else
+        ensure_installed()
+      end
+    end,
   },
 }
