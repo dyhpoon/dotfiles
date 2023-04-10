@@ -1,7 +1,7 @@
 return {
   {
     "rcarriga/nvim-dap-ui",
-    event = { "BufReadPre", "BufNewFile" },
+    event = { "BufReadPost", "BufNewFile" },
     dependencies = {
       "mfussenegger/nvim-dap",
     },
@@ -35,9 +35,16 @@ return {
   },
   {
     "leoluz/nvim-dap-go",
-    event = { "BufReadPre", "BufNewFile" },
+    event = "VeryLazy",
     config = function()
       require("dap-go").setup()
+    end,
+  },
+  {
+    "theHamsta/nvim-dap-virtual-text",
+    event = { "BufReadPost", "BufNewFile" },
+    config = function()
+      require("nvim-dap-virtual-text").setup()
     end,
   },
 }
