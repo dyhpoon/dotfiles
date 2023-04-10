@@ -15,6 +15,9 @@
     Action: Send Hex Code
     value: 0x0c
 
+- golang debugger delve
+- go install github.com/go-delve/delve/cmd/dlv@latest
+
 
 - brew
 - powerlevel10k
