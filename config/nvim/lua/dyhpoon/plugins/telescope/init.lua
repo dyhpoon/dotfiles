@@ -151,17 +151,20 @@ return {
   },
 
   {
-    "jvgrootveld/telescope-zoxide",
+    "ahmedkhalf/project.nvim",
     keys = {
-      { "<leader>z", ":lua require('telescope').extensions.zoxide.list{}<cr>", desc = "Open projects" },
-    },
-    dependencies = {
-      "nvim-lua/popup.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
+      { "<leader>z", ":lua require('telescope').extensions.projects.projects{}<cr>", desc = "Open projects" },
     },
     config = function()
-      require("telescope").load_extension("zoxide")
+      require("project_nvim").setup({
+        sync_root_with_cwd = true,
+        respect_buf_cwd = true,
+        update_focused_file = {
+          enable = true,
+          update_root = true,
+        },
+      })
+      require("telescope").load_extension("projects")
     end,
   },
 }
