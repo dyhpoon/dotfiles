@@ -16,6 +16,20 @@ end
 -- General Keymaps
 ---------------------
 
+-- better command mode
+map("n", ";", ":")
+map("v", ";", ":")
+
+-- better paste
+map("n", ",P", '"0P')
+map("n", ",p", '"0p')
+map("v", "<leader>y", '"+y')
+map("v", "<leader>d", '"+d')
+map("v", "<leader>p", '"+p')
+map("v", "<leader>P", '"+P')
+map("n", "<leader>p", '"+p')
+map("n", "<leader>P", '"+P')
+
 -- delete single character without copying into register
 map("n", "x", '"_x')
 
@@ -26,6 +40,10 @@ map("n", "<leader>w-", "<C-W>s", { desc = "Split window below" })
 map("n", "<leader>w|", "<C-W>v", { desc = "Split window right" })
 map("n", "<leader>-", "<C-W>s", { desc = "Split window below" })
 map("n", "<leader>|", "<C-W>v", { desc = "Split window right" })
+map("n", "<up>", "<C-w><up>")
+map("n", "<down>", "<C-w><down>")
+map("n", "<left>", "<C-w><left>")
+map("n", "<right>", "<C-w><right>")
 
 -- paste
 map("v", "<leader>p", '"_dP')
