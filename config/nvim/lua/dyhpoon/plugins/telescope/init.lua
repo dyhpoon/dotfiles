@@ -152,6 +152,7 @@ return {
 
   {
     "ahmedkhalf/project.nvim",
+    event = "bufWinEnter",
     keys = {
       { "<leader>z", ":lua require('telescope').extensions.projects.projects{}<cr>", desc = "Open projects" },
     },

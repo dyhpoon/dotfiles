@@ -97,7 +97,7 @@ return {
   -- Other Utils
   {
     "numToStr/Comment.nvim",
-    event = "BufRead",
+    event = "BufReadPost",
     config = function()
       require("Comment").setup()
     end,
