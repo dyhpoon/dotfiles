@@ -1,0 +1,83 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+set visualbell
+set noerrorbells
+
+""" Mappings --------------------------------
+map s <Plug>(easymotion-s)
+
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>z <Action>(ManageRecentProjects)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+
+nmap <leader>\| <Action>(SplitVertically)
+nmap <leader>\- <Action>(SplitHorizontally)
+
+nmap gD <Action>(ExternalJavaDoc)
+nmap gu <Action>(GotoSuperMethod)
+nmap gr <Action>(FindUsages)
+
+nmap <leader>db <Action>(ToggleLineBreakpoint)
+nmap <leader>dc <Action>(Debug)
+nmap <leader>dC <Action>(DebugClass)
+nmap <leader>dt <Action>(Stop)
+nmap <leader>dz <Action>(RunToCursor)
+nmap <leader>do <Action>(StepOver)
+nmap <leader>di <Action>(StepInto)
+nmap <leader>du <Action>(StepOut)
+nmap <leader>de <Action>(EvaluateExpression)
+
+nmap <leader>ca <Action>(ShowIntentionActions)
+nmap <leader>cn <Action>(GotoNextError)
+nmap <leader>cp <Action>(GotoPreviousError)
+nmap <leader>cr <Action>(RenameElement)
+nmap <leader>cit <Action>(GoIntroduceTypeAction)
+nmap <leader>civ <Action>(IntroduceVariable)
+nmap <leader>cii <Action>(Inline)
+nmap <leader>cim <Action>(ImplementMethods)
+vmap <leader>cem <Action>(ExtractMethod)
+nmap <leader>chf <Action>(GoFmtFileAction)
+
+nmap <leader>RR <Action>(RunClass)
+
+nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+

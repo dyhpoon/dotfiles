@@ -34,3 +34,7 @@
 - gh
 - lazygit
 - gnu-sed
+
+
+ln -s ~/dev/dotfiles/ideavimrc ~/.ideavimrc
+
