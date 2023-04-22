@@ -27,17 +27,17 @@ set idearefactormode=keep
 set visualbell
 set noerrorbells
 
+""" Better Command mode ---------------------
+nmap ; :
+vmap ; :
+
+""" delete single character without copying into register
+nnoremap x "_x
+
 """ Mappings --------------------------------
 map s <Plug>(easymotion-s)
 
-map <leader>z <Action>(ToggleDistractionFreeMode)
-
-map <leader>s <Action>(SelectInProjectView)
-map <leader>a <Action>(Annotate)
-map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <leader>z <Action>(ManageRecentProjects)
-
-map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
 nmap <leader>\| <Action>(SplitVertically)
@@ -67,6 +67,10 @@ nmap <leader>cii <Action>(Inline)
 nmap <leader>cim <Action>(ImplementMethods)
 vmap <leader>cem <Action>(ExtractMethod)
 nmap <leader>chf <Action>(GoFmtFileAction)
+
+nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>gb <Action>(Annotate)
+nmap <leader>gnb <Action>(GitNewBranchAction)
 
 nmap <leader>RR <Action>(RunClass)
 
