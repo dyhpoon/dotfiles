@@ -36,6 +36,8 @@ nnoremap x "_x
 
 """ Mappings --------------------------------
 map s <Plug>(easymotion-s)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
 
 map <leader>z <Action>(ManageRecentProjects)
 map <leader>o <Action>(FileStructurePopup)
