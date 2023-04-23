@@ -44,6 +44,7 @@ nmap <leader>\- <Action>(SplitHorizontally)
 
 nmap gD <Action>(ExternalJavaDoc)
 nmap gu <Action>(GotoSuperMethod)
+nmap gi <Action>(GotoImplementation)
 nmap gr <Action>(FindUsages)
 nmap gt <Action>(GotoTest)
 
