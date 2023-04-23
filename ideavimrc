@@ -2,13 +2,8 @@
 let mapleader=" "
 
 """ Plugins  --------------------------------
-set surround
 set multiple-cursors
-set commentary
-set argtextobj
 set easymotion
-set textobj-entire
-set ReplaceWithRegister
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
@@ -27,6 +22,10 @@ set idearefactormode=keep
 set visualbell
 set noerrorbells
 
+""" Use system clipboard
+set clipboard+=unnamed
+set clipboard+=ideaput
+
 """ Better Command mode ---------------------
 nmap ; :
 vmap ; :
@@ -35,12 +34,12 @@ vmap ; :
 nnoremap x "_x
 
 """ Mappings --------------------------------
-map s <Plug>(easymotion-s)
-map <leader>j <Plug>(easymotion-j)
-map <leader>k <Plug>(easymotion-k)
+nmap s <Plug>(easymotion-s)
+nmap <leader>j <Plug>(easymotion-j)
+nmap <leader>k <Plug>(easymotion-k)
 
-map <leader>z <Action>(ManageRecentProjects)
-map <leader>o <Action>(FileStructurePopup)
+nmap <leader>z <Action>(ManageRecentProjects)
+nmap <leader>o <Action>(FileStructurePopup)
 
 nmap <leader>\| <Action>(SplitVertically)
 nmap <leader>\- <Action>(SplitHorizontally)
@@ -48,6 +47,7 @@ nmap <leader>\- <Action>(SplitHorizontally)
 nmap gD <Action>(ExternalJavaDoc)
 nmap gu <Action>(GotoSuperMethod)
 nmap gr <Action>(FindUsages)
+nmap gt <Action>(GotoTest)
 
 nmap <leader>db <Action>(ToggleLineBreakpoint)
 nmap <leader>dc <Action>(Debug)
@@ -71,7 +71,9 @@ vmap <leader>cem <Action>(ExtractMethod)
 nmap <leader>chf <Action>(GoFmtFileAction)
 
 nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
-nmap <leader>gb <Action>(Annotate)
+nmap <leader>gb <Action>(Git.Branches)
+nmap <leader>ga <Action>(Annotate)
+nmap <leader>gp <Action>(Git.Pull)
 nmap <leader>gnb <Action>(GitNewBranchAction)
 
 nmap <leader>RR <Action>(RunClass)
