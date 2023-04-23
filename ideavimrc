@@ -36,6 +36,8 @@ nmap s <Plug>(easymotion-s)
 nmap <leader>j <Plug>(easymotion-j)
 nmap <leader>k <Plug>(easymotion-k)
 
+nmap <c-a> gg<s-v>G
+
 nmap <leader>z <Action>(ManageRecentProjects)
 nmap <leader>o <Action>(FileStructurePopup)
 
