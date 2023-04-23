@@ -17,8 +17,8 @@ end
 ---------------------
 
 -- better command mode
-map("n", ";", ":")
-map("v", ";", ":")
+map("n", "/", ":")
+map("v", "/", ":")
 
 -- better paste
 map("n", ",P", '"0P')
