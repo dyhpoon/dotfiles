@@ -27,8 +27,6 @@ set clipboard+=unnamed
 set clipboard+=ideaput
 
 """ Better Command mode ---------------------
-nmap / :
-vmap / :
 
 """ delete single character without copying into register
 nnoremap x "_x
