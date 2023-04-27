@@ -42,6 +42,11 @@ nmap <c-a> gg<s-v>G
 vmap < <gv
 vmap > >gv
 
+nmap cp <Action>(CopyPathFromRepositoryRootProvider)
+nmap cfp <Action>(CopyAbsolutePath)
+nmap crp <Action>(Github.Copy.Link.To.GitHub)
+vmap crp <Action>(Github.Copy.Link.To.GitHub)
+
 nmap <leader>z <Action>(ManageRecentProjects)
 nmap <leader>o <Action>(FileStructurePopup)
 
