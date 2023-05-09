@@ -86,6 +86,14 @@ nmap <leader>ga <Action>(Annotate)
 nmap <leader>gp <Action>(Git.Pull)
 nmap <leader>gnb <Action>(GitNewBranchAction)
 
+nmap <leader>gpt <Action>(codegpt.AskChatgpt)
+vmap gpte <Action>(codegpt.Explain)
+vmap gptc <Action>(codegpt.CustomPrompt)
+vamp gptr <Action>(codegpt.Refactor)
+vmap gpto <Action>(codegpt.Optimize)
+vmap gptb <Action>(codegpt.FindBugs)
+vmap gptt <Action>(codegpt.WriteTests)
+
 nmap <leader>RR <Action>(RunClass)
 
 nnoremap <leader>si :source ~/.ideavimrc<CR>
